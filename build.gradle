@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'com.google.tests'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation(
+            'io.cucumber:cucumber-java:6.8.2',
+            'io.cucumber:cucumber-junit:6.8.2'
+    )
+    testImplementation(
+            'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    )
+    testRuntimeOnly(
+            'org.junit.vintage:junit-vintage-engine:5.7.0'
+    )
+}
+
+test {
+    useJUnitPlatform()
+    testLogging.events("passed", "skipped", "failed")
+}
