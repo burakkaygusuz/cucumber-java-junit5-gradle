@@ -21,4 +21,4 @@ cache:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
 
-script: gradle test
+script: gradle cucumber
