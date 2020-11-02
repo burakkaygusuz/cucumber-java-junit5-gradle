@@ -1,5 +1,4 @@
-#Cucumber Java JUnit 5 Gradle
-
+# Cucumber Java JUnit 5 Gradle
 
 [![Build Status](https://travis-ci.org/burakkaygusuz/cucumber-java-junit5-gradle.svg?branch=master)](https://travis-ci.org/burakkaygusuz/cucumber-java-junit5-gradle)
 
