@@ -1,24 +1,14 @@
 package com.google.tests.pages;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import com.google.tests.locators.HomePageLocators;
 
-import static com.google.tests.config.DriverFactory.getChromeDriver;
+import static com.google.tests.pages.BasePage.getPage;
 
 public class HomePage {
 
-    private final WebDriver driver = getChromeDriver();
+    private final BasePage page = getPage();
 
-    @FindBy(name = "q")
-    private WebElement searchBar;
-
-    @FindBy(name = "btnK")
-    private WebElement googleSearchButton;
-
-    public HomePage() {
-        PageFactory.initElements(driver, this);
+    private HomePage() {
     }
 
     public static HomePage getHomePage() {
@@ -26,10 +16,10 @@ public class HomePage {
     }
 
     public void typeInSearchBar(String item) {
-        searchBar.sendKeys(item);
+        page.clearAndType(HomePageLocators.SEARCH_BAR, item);
     }
 
     public void submitGoogleSearchButton() {
-        googleSearchButton.submit();
+        page.submit(HomePageLocators.GOOGLE_SEARCH_BUTTON);
     }
 }

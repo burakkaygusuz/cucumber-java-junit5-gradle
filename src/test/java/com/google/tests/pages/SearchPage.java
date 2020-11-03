@@ -1,21 +1,14 @@
 package com.google.tests.pages;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import com.google.tests.locators.SearchPageLocators;
 
-import static com.google.tests.config.DriverFactory.getChromeDriver;
+import static com.google.tests.pages.BasePage.getPage;
 
 public class SearchPage{
 
-    private final WebDriver driver = getChromeDriver();
+    private final BasePage page = getPage();
 
-    @FindBy(xpath = "//*[@id='rso']/div[1]/div/div[1]/a/h3/span")
-    private WebElement firstListedResult;
-
-    public SearchPage() {
-        PageFactory.initElements(driver, this);
+    private SearchPage() {
     }
 
     public static SearchPage getSearchPage() {
@@ -23,6 +16,6 @@ public class SearchPage{
     }
 
     public String getFirstListedResultLinkText(){
-        return firstListedResult.getText();
+        return page.getText(SearchPageLocators.FIRST_LISTED_RESULT);
     }
 }
