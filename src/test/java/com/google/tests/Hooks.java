@@ -5,6 +5,8 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.TimeUnit;
 
@@ -16,6 +18,8 @@ public class Hooks {
     public WebDriver driver = null;
     public WebDriverWait wait = null;
 
+    private final Logger log = LoggerFactory.getLogger(Hooks.class);
+
     @Before
     public void beforeScenario(Scenario scenario) {
         driver = getChromeDriver();
@@ -23,6 +27,10 @@ public class Hooks {
 
         driver.get("https://google.com");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        log.info("WebDriver initialized");
+        log.info("Scenario Names : " + scenario.getName());
+        log.info("Tag(s)         : " + scenario.getSourceTagNames());
     }
 
     @After
@@ -31,5 +39,8 @@ public class Hooks {
             driver.quit();
             driver = null;
         }
+
+        log.info("Scenario status : " + scenario.getStatus());
+        log.info("WebDriver closed");
     }
 }
