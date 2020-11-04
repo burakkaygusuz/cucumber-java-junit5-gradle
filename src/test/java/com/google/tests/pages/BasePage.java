@@ -18,8 +18,8 @@ public class BasePage {
         return new BasePage();
     }
 
-    public BasePage submit(By locator) {
-        findElementByLocator(locator).submit();
+    public BasePage click(By locator) {
+        findElementByLocator(locator).click();
         return this;
     }
 

@@ -20,6 +20,6 @@ public class HomePage {
     }
 
     public void submitGoogleSearchButton() {
-        page.submit(HomePageLocators.GOOGLE_SEARCH_BUTTON);
+        page.click(HomePageLocators.GOOGLE_SEARCH_BUTTON);
     }
 }
