@@ -26,7 +26,7 @@ public class Hooks {
         wait = getWebDriverWait();
 
         driver.get("https://google.com");
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
         log.info("WebDriver initialized");
         log.info("Scenario Names : " + scenario.getName());

@@ -39,7 +39,7 @@ public class DriverFactory {
     }
 
     public static WebDriverWait getWebDriverWait() {
-        if (wait == null) wait = new WebDriverWait(getChromeDriver(), Duration.ofSeconds(10));
+        if (wait == null) wait = new WebDriverWait(getChromeDriver(), Duration.ofSeconds(30));
         return wait;
     }
 }
