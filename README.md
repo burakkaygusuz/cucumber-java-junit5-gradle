@@ -12,6 +12,6 @@ git clone git@github.com:burakkaygusuz/cucumber-java-junit5-gradle.git
 
 $ cd cucumber-java-junit5-gradle
 
-$ gradle cucumber
+$ gradle test
 
 ```
