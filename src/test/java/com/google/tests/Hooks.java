@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import static com.google.tests.config.DriverFactory.getChromeDriver;
@@ -26,7 +27,7 @@ public class Hooks {
         wait = getWebDriverWait();
 
         driver.get("https://google.com");
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
         log.info("WebDriver initialized");
         log.info("Scenario Names : " + scenario.getName());
