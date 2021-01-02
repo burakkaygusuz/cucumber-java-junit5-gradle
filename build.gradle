@@ -11,9 +11,9 @@ repositories {
 
 dependencies {
     testImplementation(
-            'io.cucumber:cucumber-java:6.8.2',
-            'io.cucumber:cucumber-junit:6.8.2',
-            'io.cucumber:cucumber-core:6.8.2',
+            'io.cucumber:cucumber-java:6.9.1',
+            'io.cucumber:cucumber-junit:6.9.1',
+            'io.cucumber:cucumber-core:6.9.1',
             "io.cucumber:cucumber-junit-platform-engine:6.9.1",
             "org.junit.platform:junit-platform-console:1.7.0",
             'org.junit.jupiter:junit-jupiter-api:5.7.0',
