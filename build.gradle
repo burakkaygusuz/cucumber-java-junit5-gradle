@@ -29,7 +29,7 @@ dependencies {
 
 tasks {
 
-    task consoleLauncherTest(type:JavaExec) {
+    task consoleLauncherTest(type: JavaExec) {
         dependsOn(testClasses)
         def reportsDir = file("$buildDir/test-results")
         outputs.dir(reportsDir)

@@ -4,7 +4,7 @@ import com.google.tests.locators.SearchPageLocators;
 
 import static com.google.tests.pages.BasePage.getPage;
 
-public class SearchPage{
+public class SearchPage {
 
     private final BasePage page = getPage();
 
@@ -15,7 +15,7 @@ public class SearchPage{
         return new SearchPage();
     }
 
-    public String getFirstListedResultLinkText(){
+    public String getFirstListedResultLinkText() {
         return page.getText(SearchPageLocators.FIRST_LISTED_RESULT);
     }
 }

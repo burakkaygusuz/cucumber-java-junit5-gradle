@@ -1,4 +1,5 @@
 Feature: Google
+
   @search
   Scenario: Search Algorithms
     Given I type "Cucumber" in searchBar
