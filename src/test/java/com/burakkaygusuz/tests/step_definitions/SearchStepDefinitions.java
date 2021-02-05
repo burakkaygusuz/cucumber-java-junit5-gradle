@@ -32,8 +32,6 @@ public class SearchStepDefinitions {
     @Then("I should see the first listed result should be {string}")
     public void iShouldSeeTheFirstListedResultShouldBe(String text) {
 
-        System.out.println("First Google Result: " + searchPage.getFirstListedResultLinkText());
-
         wait.until(ExpectedConditions.urlContains("&q=Cucumber"));
         Assertions.assertTrue(searchPage.getFirstListedResultLinkText().startsWith(text), ": The text of first google result is different");
     }
