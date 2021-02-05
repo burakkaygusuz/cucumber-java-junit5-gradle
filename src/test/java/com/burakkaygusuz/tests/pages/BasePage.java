@@ -17,8 +17,9 @@ public class BasePage {
         return new BasePage();
     }
 
-    public BasePage submit(By locator) {
-        findElementByLocator(locator).submit();
+    public BasePage click(By locator) {
+        WebElement element = findElementByLocator(locator);
+        wait.until(ExpectedConditions.elementToBeClickable(element)).click();
         return this;
     }
 
