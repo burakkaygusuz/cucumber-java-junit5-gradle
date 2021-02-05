@@ -1,4 +1,4 @@
-dist: bionic
+dist: focal
 language: java
 jdk: openjdk11
 
@@ -6,7 +6,7 @@ addons:
   chrome: stable
 
 before_install:
-  - google-chrome-stable --headless --disable-gpu
+  - google-chrome-stable --headless --disable-gpu --window-size=1920,1080
 
   - curl -s "https://get.sdkman.io" | bash
   - echo sdkman_auto_answer=true > ~/.sdkman/etc/config
@@ -23,4 +23,4 @@ cache:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
 
-script: gradle test
+script: ./gradlew clean && ./gradlew build
