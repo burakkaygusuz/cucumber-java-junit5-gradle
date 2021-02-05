@@ -1,4 +1,4 @@
-package com.google.tests.runner;
+package com.burakkaygusuz.tests.runner;
 
 import io.cucumber.junit.platform.engine.Cucumber;
 

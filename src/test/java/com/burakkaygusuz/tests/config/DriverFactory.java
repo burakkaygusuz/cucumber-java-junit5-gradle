@@ -1,4 +1,4 @@
-package com.google.tests.config;
+package com.burakkaygusuz.tests.config;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.PageLoadStrategy;

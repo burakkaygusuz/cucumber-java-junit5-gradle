@@ -1,5 +1,6 @@
-package com.google.tests;
+package com.burakkaygusuz.tests;
 
+import com.burakkaygusuz.tests.config.DriverFactory;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -10,15 +11,14 @@ import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 
-import static com.google.tests.config.DriverFactory.getChromeDriver;
-import static com.google.tests.config.DriverFactory.getWebDriverWait;
+import static com.burakkaygusuz.tests.config.DriverFactory.*;
 
 public class Hooks {
 
     public WebDriver driver = null;
     public WebDriverWait wait = null;
 
-    private final Logger log = LoggerFactory.getLogger(Hooks.class);
+    private final Logger log = LoggerFactory.getLogger(Hooks.class.getName());
 
     @Before
     public void beforeScenario(Scenario scenario) {

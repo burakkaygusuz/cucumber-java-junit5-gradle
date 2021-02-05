@@ -1,15 +1,14 @@
-package com.google.tests.pages;
+package com.burakkaygusuz.tests.pages;
 
+import com.burakkaygusuz.tests.config.DriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import static com.google.tests.config.DriverFactory.getWebDriverWait;
-
 public class BasePage {
 
-    private final WebDriverWait wait = getWebDriverWait();
+    private final WebDriverWait wait = DriverFactory.getWebDriverWait();
 
     private BasePage() {
     }
@@ -18,8 +17,8 @@ public class BasePage {
         return new BasePage();
     }
 
-    public BasePage click(By locator) {
-        findElementByLocator(locator).click();
+    public BasePage submit(By locator) {
+        findElementByLocator(locator).submit();
         return this;
     }
 

@@ -1,14 +1,14 @@
-package com.google.tests.step_definitions;
+package com.burakkaygusuz.tests.step_definitions;
 
-import com.google.tests.pages.HomePage;
-import com.google.tests.pages.SearchPage;
+import com.burakkaygusuz.tests.pages.HomePage;
+import com.burakkaygusuz.tests.pages.SearchPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.jupiter.api.Assertions;
 
-import static com.google.tests.pages.HomePage.getHomePage;
-import static com.google.tests.pages.SearchPage.getSearchPage;
+import static com.burakkaygusuz.tests.pages.HomePage.*;
+import static com.burakkaygusuz.tests.pages.SearchPage.*;
 
 public class SearchStepDefinitions {
 
@@ -27,6 +27,9 @@ public class SearchStepDefinitions {
 
     @Then("I should see the first listed result should be {string}")
     public void iShouldSeeTheFirstListedResultShouldBe(String text) {
-        Assertions.assertTrue(searchPage.getFirstListedResultLinkText().startsWith(text));
+
+        System.out.println("First Google Result: " + searchPage.getFirstListedResultLinkText());
+
+        Assertions.assertTrue(searchPage.getFirstListedResultLinkText().startsWith(text), ": The text of first google result is different");
     }
 }

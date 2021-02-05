@@ -1,4 +1,4 @@
-package com.google.tests.locators;
+package com.burakkaygusuz.tests.locators;
 
 import org.openqa.selenium.By;
 

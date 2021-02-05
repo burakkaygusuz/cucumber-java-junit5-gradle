@@ -1,8 +1,8 @@
-package com.google.tests.pages;
+package com.burakkaygusuz.tests.pages;
 
-import com.google.tests.locators.HomePageLocators;
+import com.burakkaygusuz.tests.locators.HomePageLocators;
 
-import static com.google.tests.pages.BasePage.getPage;
+import static com.burakkaygusuz.tests.pages.BasePage.getPage;
 
 public class HomePage {
 
