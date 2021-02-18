@@ -11,19 +11,18 @@ repositories {
 
 dependencies {
     testImplementation(
-            'io.cucumber:cucumber-java:6.9.1',
-            'io.cucumber:cucumber-junit:6.9.1',
-            'io.cucumber:cucumber-core:6.9.1',
-            "io.cucumber:cucumber-junit-platform-engine:6.9.1",
-            "org.junit.platform:junit-platform-console:1.7.0",
-            'org.junit.jupiter:junit-jupiter-api:5.7.0',
-            'org.seleniumhq.selenium:selenium-java:4.0.0-alpha-7',
+            'io.cucumber:cucumber-java:6.10.0',
+            'io.cucumber:cucumber-jvm:6.10.0',
+            'io.cucumber:cucumber-junit-platform-engine:6.10.0',
+            'org.junit.platform:junit-platform-console:1.8.0-M1',
+            'org.junit.jupiter:junit-jupiter-api:5.8.0-M1',
+            'org.seleniumhq.selenium:selenium-java:4.0.0-beta-1',
             'io.github.bonigarcia:webdrivermanager:4.3.1',
             'org.slf4j:slf4j-simple:2.0.0-alpha1',
             'org.slf4j:slf4j-api:2.0.0-alpha1'
     )
     testRuntimeOnly(
-            'org.junit.platform:junit-platform-engine:1.7.0'
+            'org.junit.platform:junit-platform-engine:1.8.0-M1'
     )
 }
 
